@@ -97,6 +97,102 @@
                 "type": "Point",
                 "coordinates": [-73.990474, 40.743226]
             }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "Name": "Sacred Sounds Yoga",
+                "BusType": "Yoga",
+                "Description": "This studio is a Mecca of tranquility set in the hustle and bustle of Greenwich Village."
+
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-74.000523, 40.728682]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "Name": "Reflections Yoga",
+                "BusType": "Yoga",
+                "Description": "Reflections offers classes and workshops in yoga, Franklin Method, Yin Yoga, and much more!"
+
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.981593, 40.739230]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "Name": "Church Street Boxing Gym",
+                "BusType": "Boxing",
+                "Description": "Shed the weight, tone up, and learn to FIGHT BACK at New York's Premium, Highly Staffed Boxing Gym!"
+
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-74.008621, 40.713498]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "Name": "Krav Maga Academy",
+                "BusType": "Boxing",
+                "Description": "Krav Maga Academy offers the highest level of Krav Maga in NYC."
+
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.990185, 40.744566]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "Name": "Flywheel Sports",
+                "BusType": "Cycling",
+                "Description": "Best spin class in NYC at Chelsea's newest spin studio Flywheel!"
+
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.992854, 40.741479]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "Name": "Deep Water Running",
+                "BusType": "Running",
+                "Description": "Robert J Valentin's Deep Water Running is a non-impact form of running in place done in a pool while wearing a flotation belt."
+
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.973819, 40.757067]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "Name": "Tone House",
+                "BusType": "Running",
+                "Description": "Tone House believes that movement training is the key to effective athletic-based, sports conditioning workouts."
+
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.991395, 40.737350]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "Name": "Circuit of Change",
+                "BusType": "Running",
+                "Description": "The Mindbody Bootcamp combines key elements of martial arts, cardio core strengthening, gymnastics."
+
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.995350, 40.738793]
+            }
         }
 
 

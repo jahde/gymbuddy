@@ -8,11 +8,9 @@
     <link rel="stylesheet" href="css/leaflet.awesome-markers.css">
 
     <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/map.js"></script>
-    <script src="js/angular-leaflet-directive.min.js.js"></script>
+    <script src="js/leaflet.awesome-markers.js"></script>
 
     <style type="text/css">
     #map {
@@ -37,6 +35,30 @@
         .addLayer(mapboxTiles)
         .setView([40.736, -74.015], 13);
 
+    var yogaIcon = L.AwesomeMarkers.icon({
+      prefix: 'fa',
+      markerColor: 'red',
+      icon: 'heart'
+    });
+
+    // var yogaIcon = L.AwesomeMarkers.icon({
+    //   prefix: 'fa',
+    //   markerColor: 'red',
+    //   icon: 'coffee'
+    // });
+
+    // var cyclingIcon = L.AwesomeMarkers.icon({
+    //   prefix: 'fa',
+    //   markerColor: 'green',
+    //   icon: 'bicycle'
+    // });
+
+    // var yogaIcon = L.AwesomeMarkers.icon({
+    //   prefix: 'fa',
+    //   markerColor: 'red',
+    //   icon: 'coffee'
+    // });
+
     // jQuery to grab the businesses JSON
     var promise = $.getJSON("businesses.json");
     promise.then(function(data) {
@@ -44,15 +66,41 @@
       var allbusinesses = L.geoJson(data);
       // allbusinesses.addTo(map);
 
-      function onEachFeature(feature, layer) {
-        // check feature for popupContent property then display
-        if (feature.properties && feature.properties.popupContent) {
-          layer.bindPopup(feature.properties.popupContent);
-        }
-      }
+      // specific fitness types start
 
-      L.geoJson(data, {
-        onEachFeature: onEachFeature,
+      var yoga = L.geoJson(data, {
+        filter: function(feature, layer) {
+          return feature.properties.BusType == "Yoga";
+        },
+        pointToLayer: function(feature, latlng) {
+          return L.marker(latlng, {
+            icon: yogaIcon
+          })
+        }
+      });
+
+      // var boxing = L.geoJson(data, {
+      //   filter: function(feature, layer) {
+      //     return feature.properties.BusType == "Boxing";
+      //   }
+      // });
+
+      // var cycling = L.geoJson(data, {
+      //   filter: function(feature, layer) {
+      //     return feature.properties.BusType == "Cycling";
+      //   }
+      // });
+
+      // var running = L.geoJson(data, {
+      //   filter: function(feature, layer) {
+      //     return feature.properties.BusType == "Running";
+      //   }
+      // });
+
+      var others = L.geoJson(data, {
+        filter: function(feature, layer) {
+          return feature.properties.BusType == "Blank";
+        },
         pointToLayer: function(feature, latlng) {
           return L.marker(latlng, {
 
@@ -60,15 +108,23 @@
             this.bindPopup(feature.properties.Name).openPopup();
           });
         }
-      }).addTo(map);
+      // });
+
+      // end
 
       map.fitBounds(allbusinesses.getBounds(), {
         padding: [50, 50]
       })
 
+      // add specific fitness types to map
+      yoga.addTo(map)
+      // boxing.addTo(map)
+      // cycling.addTo(map)
+      // running.addTo(map)
+      others.addTo(map)
+
       // console.log(data)
     })
-
     </script>
 </body>
 </html>

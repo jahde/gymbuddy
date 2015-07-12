@@ -1,0 +1,105 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Sound Off Yoga",
+                "BusType": "Yoga",
+                "Description": "South Street Seaport will be taken over by hundreds of yogis for a special Deep Flow Yoga Session under the stars!"
+
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-74.003610, 40.707124]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "Name": "Golden Bridge Yoga",
+                "BusType": "Yoga",
+                "Description": "Golden Bridge is a community, a village, where you can develop a meaningful yogic practice and a yogi lifestyle."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.998222, 40.720669]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "Name": "TITLE Boxing Club",
+                "BusType": "Boxing",
+                "Description": "This Hell's Kitchen boxing and kickboxing based studio burns up to 1,000 calories/hour and is focused on toning muscle and burning fat."
+
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.997090, 40.756662]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "Name": "UFC Gym - Fidi",
+                "BusType": "Boxing",
+                "Description": "UFC GYM is the ultimate fitness destination for men, women and kids who want to train like champions."
+
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-74.007026, 40.708306]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "Name": "Flywheel",
+                "BusType": "Cycling",
+                "Description": "Flywheel is equipped with technology that sets a new standard for indoor cycling."
+
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-74.009357, 40.721890]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "Name": "Peloton",
+                "BusType": "Cycling",
+                "Description": "A high-end brick and mortar cycling studio, featuring the best indoor cycling instructors."
+
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.994671, 40.743386]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "Name": "Drill Fitness",
+                "BusType": "Running",
+                "Description": "Drill Fitness classes are the epitome of exercise efficiency. Just 50 minutes of Drill Ride or Drill Body will annihilate 1,000 calories."
+
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-74.011532, 40.709742]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "Name": "TheRun",
+                "BusType": "Running",
+                "Description": "The Shaper class is composed of 30 minutes of running intervals and 15 minutes of form drills, stretches and exercises on the treadmill."
+
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.990474, 40.743226]
+            }
+        }
+
+
+    ]
+
+}

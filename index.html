@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="http://faviconist.com/icons/9dc89a32b7834bb6d52bc9588d575a43/favicon.ico" />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="leaflet_awesome_markers.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="leaflet_awesome_markers.js"></script>
+    <style type="text/css">
+    #map {
+        width: 700px;
+        height: 550px;
+    }
+    </style>
+    <title>GymBuddy</title>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script type="text/javascript">
+    var mapboxTiles = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+          maxZoom: 18,
+          id: 'jahde.mmllmcng',
+          accessToken: 'pk.eyJ1IjoiamFoZGUiLCJhIjoiNjk4ZGYyZGJkNWNjY2I1MzM4MTVlYmUxNmNiZTkzYzYifQ.stPmhXbpMlB7zX9v5KzFEA'
+    });
+
+    var map = L.map('map')
+        .addLayer(mapboxTiles)
+        .setView([40.736, -74.015], 13);
+
+    // fitness colors: 'red', 'darkred', 'orange', 'green', 'darkgreen', 'blue', 'purple', 'darkpuple', 'cadetblue'
+    var yogaIcon = L.AwesomeMarkers.icon({
+      prefix: 'fa',
+      markerColor: 'red',
+      icon: 'heart'
+    });
+
+    // var yogaIcon = L.AwesomeMarkers.icon({
+    //   prefix: 'fa',
+    //   markerColor: 'red',
+    //   icon: 'coffee'
+    // });
+
+    // var cyclingIcon = L.AwesomeMarkers.icon({
+    //   prefix: 'fa',
+    //   markerColor: 'green',
+    //   icon: 'bicycle'
+    // });
+
+    // var yogaIcon = L.AwesomeMarkers.icon({
+    //   prefix: 'fa',
+    //   markerColor: 'red',
+    //   icon: 'coffee'
+    // });
+
+    // jQuery to grab the businesses JSON
+    var promise = $.getJSON("businesses.json");
+    promise.then(function(data) {
+
+      var allbusinesses = L.geoJson(data);
+      allbusinesses.addTo(map);
+
+      // specific fitness types start
+      var yoga = L.geoJson(data, {
+        filter: function(feature, layer) {
+          return feature.properties.BusType == "Yoga";
+        }
+      });
+
+      var boxing = L.geoJson(data, {
+        filter: function(feature, layer) {
+          return feature.properties.BusType == "Boxing";
+        }
+      });
+
+      var cycling = L.geoJson(data, {
+        filter: function(feature, layer) {
+          return feature.properties.BusType == "Cycling";
+        }
+      });
+
+      var running = L.geoJson(data, {
+        filter: function(feature, layer) {
+          return feature.properties.BusType == "Running";
+        }
+      });
+      // end
+
+      map.fitBounds(allbusinesses.getBounds(), {
+        padding: [50, 50]
+      })
+
+      // add specific fitness types to map
+      yoga.addTo(map)
+      boxing.addTo(map)
+      cycling.addTo(map)
+      running.addTo(map)
+
+      // console.log(data)
+    })
+    </script>
+</body>
+</html>

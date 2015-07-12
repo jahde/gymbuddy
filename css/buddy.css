@@ -25,6 +25,14 @@
   font-size: 22px;
 }
 
+#left-side {
+  float: left;
+}
+
+#right-side {
+  color: white;
+}
+
 body {
   margin-bottom: 0px;
   margin-left: 0px;

@@ -1,3 +1,3 @@
-'use strict';
+// 'use strict';
 
-var gymBuddy = angular.module('gymBuddy', ['ngRoute', 'leaflet-directive']);
+// var app = angular.module('gymBuddy', ['leaflet-directive']);

@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en" class=" is-copy-enabled">
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
@@ -8,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta name="viewport" content="width=1020">
-    
-    
+
+
     <title>Leaflet.awesome-markers/leaflet.awesome-markers.js at 2.0/develop · lvoogdt/Leaflet.awesome-markers</title>
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
     <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
@@ -35,7 +32,7 @@
         <meta name="google-analytics" content="UA-3769691-2">
 
     <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="CFED2891:0FA3:47380C6:55A2C7A0" name="octolytics-dimension-request_id" /><meta content="3936832" name="octolytics-actor-id" /><meta content="jahde" name="octolytics-actor-login" /><meta content="582845f0114271ffd8d14fb2620be3c69b30a03db86df21b6888514ac33e0860" name="octolytics-actor-hash" />
-    
+
     <meta content="Rails, view, blob#show" data-pjax-transient="true" name="analytics-event" />
     <meta class="js-ga-set" name="dimension1" content="Logged In">
     <meta name="is-dotcom" content="true">
@@ -52,13 +49,13 @@
 
     <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github/index-8824a5ef57ac4ae0b5ca429778b9660b1c66d09deea2ff11681de18d86a4bbb1.css" media="all" rel="stylesheet" />
     <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2/index-f0d033a37796c27f6b5b24aa8dc21af9c206a51ed2fe782d660dc20267c17d2b.css" media="all" rel="stylesheet" />
-    
-    
+
+
 
 
     <meta http-equiv="x-pjax-version" content="3f58d2288e653bc3998db56bf3ad89c7">
 
-      
+
   <meta name="description" content="Leaflet.awesome-markers - Colorful, iconic &amp; retina-proof markers for Leaflet, based on the Font Awesome/Twitter Bootstrap icons.">
   <meta name="go-import" content="github.com/lvoogdt/Leaflet.awesome-markers git https://github.com/lvoogdt/Leaflet.awesome-markers.git">
 
@@ -71,9 +68,9 @@
   <body class="logged_in  env-production macintosh vis-public page-blob">
     <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
     <div class="wrapper">
-      
-      
-      
+
+
+
 
 
 
@@ -116,7 +113,7 @@
           </li>
       </ul>
 
-    
+
 <ul class="header-nav user-nav right" id="user-links">
   <li class="header-nav-item">
       <span class="js-socket-channel js-updatable-content"
@@ -139,7 +136,7 @@
 
     <div class="dropdown-menu-content js-menu-content">
       <ul class="dropdown-menu dropdown-menu-sw">
-        
+
 <a class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
   New repository
 </a>
@@ -206,24 +203,24 @@
 </ul>
 
 
-    
+
   </div>
 </div>
 
-        
 
-        
+
+
 
 
       <div id="start-of-content" class="accessibility-aid"></div>
           <div class="site" itemscope itemtype="http://schema.org/WebPage">
     <div id="js-flash-container">
-      
+
     </div>
     <div class="pagehead repohead instapaper_ignore readability-menu">
       <div class="container">
 
-        
+
 <ul class="pagehead-actions">
 
   <li>
@@ -299,7 +296,7 @@
   </li>
 
   <li>
-    
+
   <div class="js-toggler-container js-social-container starring-container ">
 
     <form accept-charset="UTF-8" action="/lvoogdt/Leaflet.awesome-markers/unstar" class="js-toggler-form starred js-unstar-button" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="WvDe9oSJAxvj+uHe9lPCOJBoe9cdS0zvad89k7XAcalAgzIWCBUuznvdcBfNONMUTD9g1uUjjh/ZUiMWDhMoog==" /></div>
@@ -369,7 +366,7 @@
     <div class="container">
       <div class="repository-with-sidebar repo-container new-discussion-timeline  ">
         <div class="repository-sidebar clearfix">
-            
+
 <nav class="sunken-menu repo-nav js-repo-nav js-sidenav-container-pjax js-octicon-loaders"
      role="navigation"
      data-pjax="#js-repo-pjax-container"
@@ -421,7 +418,7 @@
 </nav>
 
               <div class="only-with-full-nav">
-                  
+
 <div class="js-clone-url clone-url "
   data-protocol-type="http">
   <h3><span class="text-emphasized">HTTPS</span> clone URL</h3>
@@ -434,7 +431,7 @@
   </div>
 </div>
 
-  
+
 <div class="js-clone-url clone-url open"
   data-protocol-type="ssh">
   <h3><span class="text-emphasized">SSH</span> clone URL</h3>
@@ -447,7 +444,7 @@
   </div>
 </div>
 
-  
+
 <div class="js-clone-url clone-url "
   data-protocol-type="subversion">
   <h3><span class="text-emphasized">Subversion</span> checkout URL</h3>
@@ -489,14 +486,14 @@
 
         <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
 
-          
+
 
 <a href="/lvoogdt/Leaflet.awesome-markers/blob/4dfeef6943d58bde2d8ea1213250f6e1aa49ef0f/dist/leaflet.awesome-markers.js" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
 
 <!-- blob contrib key: blob_contributors:v21:8ee08d9aa5ed5be939e780dc6a827541 -->
 
 <div class="file-navigation js-zeroclipboard-container">
-  
+
 <div class="select-menu js-menu-container js-select-menu left">
   <span class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
     data-ref="2.0/develop"
@@ -720,7 +717,7 @@
       3.789 kB
     </div>
   </div>
-  
+
 
   <div class="blob-wrapper data type-javascript">
       <table class="highlight tab-size js-file-line-container" data-tab-size="8">
@@ -1323,8 +1320,8 @@
 
 
 
-    
-    
+
+
 
     <div id="ajax-error-message" class="flash flash-error">
       <span class="octicon octicon-alert"></span>
@@ -1335,8 +1332,8 @@
 
       <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-3241a40a58a82e21daef3dd3cdca01bde189158793c1b6f9193fff2b5293cd1d.js"></script>
       <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github/index-d3ef45e52a74e2511c31a0051d5dfd10b60b12a8b8a738ead962c35e11dbcc1f.js"></script>
-      
-      
+
+
   </body>
 </html>
 

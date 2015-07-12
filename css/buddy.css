@@ -1,0 +1,34 @@
+#nav-bar {
+  box-sizing: border-box;
+  background-color: #14192E;
+  color: #1DAC98;
+  display: block;
+  height: 72px;
+  letter-spacing: 0.75px;
+  line-height: 18px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  max-width: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+}
+
+#nav-title {
+  padding-top: 13px;
+  font-family: proxima-nova, sans-serif;
+  font-size: 22px;
+}
+
+body {
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  background-color: #252A40;
+}

@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="css/buddy.css">
 
     <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/angular-leaflet-directive.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <style type="text/css">
@@ -26,7 +26,26 @@
     <script>
       var app = angular.module('gymBuddy', ['leaflet-directive']);
 
-
+      app.controller("MapBoxGeoJSONController", ['$scope', '$http', function($scope, $http) {
+          angular.extend($scope, {
+            center: {
+              lat: 40.736,
+              lng: -74.015,
+              zoom: 13
+            },
+            tiles: {
+              name: 'Mapbox NYC',
+              url: 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}',
+              attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+              maxZoom: 18,
+              options: {
+                accessToken: 'pk.eyJ1IjoiamFoZGUiLCJhIjoiNjk4ZGYyZGJkNWNjY2I1MzM4MTVlYmUxNmNiZTkzYzYifQ.stPmhXbpMlB7zX9v5KzFEA',
+                mapid: 'jahde.mmllmcng'
+              }
+            },
+            geoJson: {}
+          })
+      }]);
     </script>
 </head>
 <body>
@@ -86,16 +105,7 @@
       </script>
     </div>
     <div id="right-side">
-      <div class="row">
-        <table ng-cloak class='table table-striped full'>
-          <thead>
-            <tr>
-              <th>
-              </th>
-            </tr>
-          </thead>
-        </table>
-      </div>
+
     </div>
 </body>
 </html>

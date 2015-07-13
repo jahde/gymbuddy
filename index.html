@@ -25,7 +25,20 @@
     <script>
       var app = angular.module('gymBuddy', ['leaflet-directive']);
 
-      app.controller("MapBoxGeoJSONController", ['$scope', '$http', function($scope, $http) {
+      app.controller("MapBoxGeoJSONController", ['$scope', '$http', '$filter', function($scope, $http, $filter) {
+
+          //// filter section
+          $scope.search = ''; // declare empty search model
+          $scope.geojson = {}; // declare empty geojson object to hold search values
+          $scope.$watch('search', function(newVal, Oldval) {
+            if (newVal !== oldVal && newVal !== '') {
+              $scope.geojson.data = $filter('filter')($scope.data, 'BusType', newVal);
+            } else {
+              $scope.geojson.data = $scope.data;
+            }
+          });
+          //// filter end
+
           angular.extend($scope, {
             center: {
               lat: 40.736,
@@ -63,15 +76,38 @@
               $scope.geojson.data = data;
           });
 
-          // $scope.$on('leafletDirectiveMap.click', function(event, args){
-          //   alert("HIII");
-          //   console.log(args.leafletEvent.latlng);
-          // });
+          $scope.$on('leafletDirectiveMap.click', function(event, args){
+            alert(args.leafletEvent.latlng);
+          });
 
           // $scope.$on('leafletDirectiveMarker.mouseover', function(e, args) {
           //      args.leafletEvent.target.openPopup();
           // });
       }]);
+
+      //// javascript filter
+      app.filter('filter', [function() {
+        return function(geojson, searchProperty, searchValue) {
+          // store foundm matches in features
+          var matches = {'type': 'FeatureCollection', 'features': []};
+
+          // loop over each source feature
+          angular.forEach(geojson.features, function(featureObject, featureKey) {
+            if (featureObject.properties.hasOwnProperty(searchProperty)) {
+              var property = featureObject.properties[searchProperty].toLowerCase();
+
+              var search = searchValue.toLowerCase();
+
+              if (property.indexOf(search) > -1) {
+                // match is found and add to array
+                matches.features.push(featureObject)
+              }
+            }
+          });
+          return matches; // returns GeoJSON object matches
+        };
+      }]);
+      //// JS filter end
     </script>
 </head>
 <body ng-controller="MapBoxGeoJSONController">
@@ -82,8 +118,19 @@
     </div>
     <div id="left-side">
 
-      <!-- angular section -->
+      <!-- angular HTML section -->
       <leaflet center="center" tiles="tiles" geojson="geojson" width="100%" height="480px" event-broadcast="events"></leaflet>
+
+      <!-- //// new stack -->
+      <input ng-model="search" />
+      <select multiple>
+        <option ng-repeat="feature in geojson.data.features">
+          {{feature.properties.Name}} || Type -
+          {{feature.properties.BusType}}
+        </option>
+      </select>
+      <!-- //// new stack -->
+
       <!-- <pre ng-bind="layers | json"></pre> -->
       <!-- angular end -->
 
